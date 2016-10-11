@@ -2,6 +2,9 @@
 set nocompatible    " start out not in VI compatible mode
 behave mswin        " set mouse behaviour similar to windows
 
+" pathogen setup
+execute pathogen#infect()
+
 " Colors and formatting
 syntax enable       " enable syntax highlighting keeping current color
                     " settings (use syntax on to overrule settings with defaults)
