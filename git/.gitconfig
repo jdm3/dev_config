@@ -1,0 +1,79 @@
+[advice]
+    pushNonFastForward = true
+    statushints = true
+    commitbeforemerge = true
+    resolveconflict = true
+    implicitidentity = true
+    detachedhead = true
+[alias]
+    br = branch -v -a
+    co = checkout
+    ft = remote -v update -p
+    lg = log --full-history --pretty=\"format:%C(yellow)%h%Cgreen%d%Creset %s\" -n 15
+    lgg = log --graph --branches --remotes --full-history --pretty=\"format:%C(yellow)%h%Cgreen%d%Creset %s (%an, %cd)\" -n 22
+    st = status --short --branch
+    fix = commit --amend --no-edit
+[color]
+    branch = auto
+    diff = auto
+    interactive = true
+    status = auto
+    ui = auto
+#[color "diff"]
+#    commit = yellow yellow
+#    frag = cyan dim
+#    func = cyan
+#    meta = yellow
+#    new = green
+#    old = red
+#    plain = normal
+#    whitespace = black red
+[core]
+    autocrlf = false
+    editor = \"c:\\Program Files (x86)\\Vim\\vim72\\vim.exe\"
+    pager = 
+    symlinks = false
+[credential]
+    helper = wincred
+[diff]
+    tool = winmergeu
+    #tool = diffmerge
+[diff "astextplain"]
+    textconv = astextplain
+[difftool "diffmerge"]
+    cmd = \"c:\\program files\\sourcegear\\common\\diffmerge\\sgdm.exe\" --nosplash \"$LOCAL\" \"$REMOTE\"
+[difftool "winmergeu"]
+    cmd = winmergeu.exe \"$LOCAL\" \"$REMOTE\"
+[difftool]
+    prompt = false
+[help]
+    format = html
+[http]
+[https]
+[mergetool "winmergeu"]
+    # LOCAL = current branch version
+    # REMOTE = version to be merged
+    # BASE = common ancestor
+    # MERGED = file where results will be written
+    cmd = winmergeu.exe \"$REMOTE\" \"$LOCAL\" \"$MERGED\"
+    trustExitCode = false
+[mergetool "diffmerge"]
+    cmd = \"c:\\program files\\sourcegear\\common\\diffmerge\\sgdm.exe\" --nosplash --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
+    trustExitCode = true
+[mergetool "p4merge"]
+    cmd = p4merge.exe \"$BASE\" \"$REMOTE\" \"$LOCAL\" \"$MERGED\"
+    trustExitCode = false
+[mergetool]
+    prompt = false
+    keepBackup = false
+    keepTemporaries = false
+[merge]
+    #tool = p4merge
+    tool = diffmerge
+[pack]
+    packSizeLimit = 2g
+[rebase]
+    autosquash = true
+[user]
+    name = Jefferson Montgomery
+    email = todo@todo.com
