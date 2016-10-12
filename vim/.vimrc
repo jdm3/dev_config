@@ -1,9 +1,17 @@
 " Global
-set nocompatible    " start out not in VI compatible mode
-behave mswin        " set mouse behaviour similar to windows
+set nocompatible        " start out not in VI compatible mode
+behave mswin            " set mouse behaviour similar to windows
+let mapleader=","       " use , for in any commands that specify via <leader>
 
-" pathogen setup
+" setup pathogen
 execute pathogen#infect()
+
+" setup argwrap
+let g:argwrap_line_prefix=""        " prefix for new lines
+let g:argwrap_padded_braces=""      " types of braces that require padding
+let g:argwrap_tail_comma=0          " does closing brace require comma
+let g:argwrap_wrap_closing_brace=0  " put closing brace on new line
+nnoremap <silent> <leader>f :ArgWrap<cr>
 
 " Colors and formatting
 syntax enable       " enable syntax highlighting keeping current color
