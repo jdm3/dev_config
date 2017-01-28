@@ -33,6 +33,7 @@
     editor = \"c:\\Program Files (x86)\\Vim\\vim80\\vim.exe\"
     pager = 
     symlinks = false
+    excludesfile = ~/.gitignore
 [credential]
     helper = wincred
 [diff]

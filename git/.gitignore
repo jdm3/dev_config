@@ -1,0 +1,25 @@
+# vim swap files
+*.swp
+*.swo
+
+# Open office docs
+~$*.pptx
+~$*.xlsx
+
+# Visual studio temporary/user files
+.vs/
+ipch/
+*.sdf
+*.v12.suo
+*.opensdf
+*.csproj.user
+*.vcxproj.user
+*.VC.VC.opendb
+*.VC.db
+
+# OS
+.DS_Store
+
+# Python cache
+__pycache__/
+
