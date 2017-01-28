@@ -18,6 +18,7 @@ let c_comment_strings=1
 
 syntax reset
 
+colorscheme solarized
 "colorscheme jdmdark
 "colorscheme jdmlight
 
@@ -39,7 +40,4 @@ call IncreaseFontSize(0)
 
 map - :call IncreaseFontSize(-1)<cr>
 map + :call IncreaseFontSize(1)<cr>
-
-"map ,l :colorscheme jdmlight<cr>
-"map ,d :colorscheme jdmdark<cr>
 

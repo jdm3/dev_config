@@ -95,3 +95,6 @@ set tags=./tags;/
 
 "autocmd QuickFixCmdPost make cwindow 5
 
+map <leader>l :set background=light<cr>
+map <leader>d :set background=dark<cr>
+
