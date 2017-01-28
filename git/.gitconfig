@@ -30,7 +30,7 @@
 #    whitespace = black red
 [core]
     autocrlf = false
-    editor = \"c:\\Program Files (x86)\\Vim\\vim72\\vim.exe\"
+    editor = \"c:\\Program Files (x86)\\Vim\\vim80\\vim.exe\"
     pager = 
     symlinks = false
 [credential]
@@ -43,7 +43,7 @@
 [difftool "diffmerge"]
     cmd = \"c:\\program files\\sourcegear\\common\\diffmerge\\sgdm.exe\" --nosplash \"$LOCAL\" \"$REMOTE\"
 [difftool "winmergeu"]
-    cmd = winmergeu.exe \"$LOCAL\" \"$REMOTE\"
+    cmd = \"c:\\program files (x86)\\winmerge\\winmergeu.exe\" \"$LOCAL\" \"$REMOTE\"
 [difftool]
     prompt = false
 [help]
@@ -55,7 +55,7 @@
     # REMOTE = version to be merged
     # BASE = common ancestor
     # MERGED = file where results will be written
-    cmd = winmergeu.exe \"$REMOTE\" \"$LOCAL\" \"$MERGED\"
+    cmd = \"c:\\program files (x86)\\winmerge\\winmergeu.exe\" \"$REMOTE\" \"$LOCAL\" \"$MERGED\"
     trustExitCode = false
 [mergetool "diffmerge"]
     cmd = \"c:\\program files\\sourcegear\\common\\diffmerge\\sgdm.exe\" --nosplash --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
@@ -69,11 +69,11 @@
     keepTemporaries = false
 [merge]
     #tool = p4merge
-    tool = diffmerge
+    tool = winmergeu
 [pack]
     packSizeLimit = 2g
 [rebase]
     autosquash = true
 [user]
-    name = Jefferson Montgomery
+    name = todo
     email = todo@todo.com
