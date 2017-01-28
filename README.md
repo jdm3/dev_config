@@ -4,6 +4,7 @@ Collection of configuration files and such used on dev machines
 
 ## Useful links
 
+- https://git-scm.com/download/win
 - ftp://ftp.vim.org/pub/vim/pc/gvim80.exe
 - https://download.damieng.com/fonts/original/EnvyCodeR-PR7.zip
 - http://www.7-zip.org/a/7z1604-x64.exe
