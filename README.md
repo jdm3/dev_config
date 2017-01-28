@@ -13,6 +13,9 @@ Collection of configuration files and such used on dev machines
 - https://download.sysinternals.com/files/ProcessExplorer.zip
 - https://the.earth.li/~sgtatham/putty/latest/x86/putty.exe
 
+Make sure git mingw path is after vim, or else will use the unix vim in
+console.
+
 Increase Win10 keyboard repeat rate (reboot required):
 ```
     [HKEY_CURRENT_USER\Control Panel\Accessibility\Keyboard Response]

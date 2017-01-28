@@ -4,7 +4,7 @@ behave mswin            " set mouse behaviour similar to windows
 let mapleader=","       " use , for in any commands that specify via <leader>
 
 " setup pathogen
-execute pathogen#infect()
+call pathogen#infect()
 
 " setup argwrap
 let g:argwrap_line_prefix=""        " prefix for new lines
