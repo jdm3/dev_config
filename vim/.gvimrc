@@ -18,9 +18,9 @@ let c_comment_strings=1
 
 syntax reset
 
+set background=dark
 colorscheme solarized
-"colorscheme jdmdark
-"colorscheme jdmlight
+color solarized
 
 "autocmd BufEnter *.{h,c,cpp} highlight link StyleViolation SpellBad
 "autocmd BufEnter *.{h,c,cpp} match StyleViolation /\%81v.\+\|\s\+$\|\t/
@@ -41,3 +41,11 @@ call IncreaseFontSize(0)
 map - :call IncreaseFontSize(-1)<cr>
 map + :call IncreaseFontSize(1)<cr>
 
+" Maximize all windows
+if &diff
+    set lines=999 columns=999
+else
+    set winminheight=0
+    set winminwidth=0
+    set winheight=999
+endif

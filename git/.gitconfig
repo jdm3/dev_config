@@ -37,20 +37,50 @@
 [credential]
     helper = wincred
 [diff]
-    tool = winmergeu
     #tool = diffmerge
+    #tool = gvimdiff
+    tool = winmergeu
 [diff "astextplain"]
     textconv = astextplain
 [difftool "diffmerge"]
     cmd = \"c:\\program files\\sourcegear\\common\\diffmerge\\sgdm.exe\" --nosplash \"$LOCAL\" \"$REMOTE\"
+    prompt = false
+[difftool "gvimdiff"]
+    cmd = \"c:\\program files (x86)\\Vim\\vim80\\gvim.exe\" -f -d -c 'wincmd l' -c 'cd $GIT_PREFIX' \"$LOCAL\" \"$REMOTE\"
+    prompt = false
 [difftool "winmergeu"]
     cmd = \"c:\\program files (x86)\\winmerge\\winmergeu.exe\" \"$LOCAL\" \"$REMOTE\"
-[difftool]
     prompt = false
 [help]
     format = html
 [http]
 [https]
+[merge]
+    #tool = diffmerge
+    tool = gvimdiff
+    #tool = p4merge
+    #tool = winmergeu
+[mergetool]
+    keepBackup = false          # Don't generate .orig files
+    keepTemporaries = false     # Delete temporaries after tool exits
+    writeToTemp = true          # Writes temporaries to a temporary directory
+    prompt = false              # Don't prompt before each merge resolution
+[mergetool "diffmerge"]
+    # LOCAL = current branch version
+    # REMOTE = version to be merged
+    # BASE = common ancestor
+    # MERGED = file where results will be written
+    cmd = \"c:\\program files\\sourcegear\\common\\diffmerge\\sgdm.exe\" --nosplash --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
+    trustExitCode = true
+#[mergetool "gvimmerge"]
+#    cmd = \"c:\\program files (x86)\\Vim\\vim80\\gvim.exe\" -f -d -c 'wincmd l' -c 'cd $GIT_PREFIX' \"$LOCAL\" \"$REMOTE\"
+#    keepBackup = false
+#    keepTemporaries = false
+#    prompt = false
+#    trustExitCode = true
+[mergetool "p4merge"]
+    cmd = p4merge.exe \"$BASE\" \"$REMOTE\" \"$LOCAL\" \"$MERGED\"
+    trustExitCode = false
 [mergetool "winmergeu"]
     # LOCAL = current branch version
     # REMOTE = version to be merged
@@ -58,19 +88,6 @@
     # MERGED = file where results will be written
     cmd = \"c:\\program files (x86)\\winmerge\\winmergeu.exe\" \"$REMOTE\" \"$LOCAL\" \"$MERGED\"
     trustExitCode = false
-[mergetool "diffmerge"]
-    cmd = \"c:\\program files\\sourcegear\\common\\diffmerge\\sgdm.exe\" --nosplash --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
-    trustExitCode = true
-[mergetool "p4merge"]
-    cmd = p4merge.exe \"$BASE\" \"$REMOTE\" \"$LOCAL\" \"$MERGED\"
-    trustExitCode = false
-[mergetool]
-    prompt = false
-    keepBackup = false
-    keepTemporaries = false
-[merge]
-    #tool = p4merge
-    tool = winmergeu
 [pack]
     packSizeLimit = 2g
 [rebase]
