@@ -46,9 +46,6 @@ set shiftwidth=4                " how many columns reindent operations (e.g., >>
 set softtabstop=4               " number of spaces used for tab character written while editing
 set tabstop=4                   " number of spaces used for tab character read from file
 
-" Disable automatic comment on new lines created by o or O
-autocmd BufReadPost * set formatoptions-=o
-
 " Display
 set gcr=a:blinkon0  " Disable cursor blink
 set lazyredraw      " Don't refresh screen during macros
@@ -77,6 +74,10 @@ set fileformats=unix,dos    " eol characters to try when reading a file
 set nobackup                " make a backup before overwriting a file.
 set nowritebackup           " write files directly (instead of write to backup and overwrite)
 "set noswapfile
+
+" NOTE: FileType autocmds must be after filetype command
+" Disable automatic comment on new lines created by o or O
+autocmd FileType * set formatoptions-=o
 
 " Windows
 map <C-J> <C-W>j
