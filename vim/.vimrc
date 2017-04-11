@@ -76,8 +76,9 @@ set nowritebackup           " write files directly (instead of write to backup a
 "set noswapfile
 
 " NOTE: FileType autocmds must be after filetype command
+" Disable automatic comment on new lines created by <Enter> in insert mode
 " Disable automatic comment on new lines created by o or O
-autocmd FileType * set formatoptions-=o
+autocmd FileType * set formatoptions-=ro
 
 " Windows
 map <C-J> <C-W>j
