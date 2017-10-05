@@ -35,7 +35,7 @@ function! IncreaseFontSize(amount)
 endfunction
 
 let g:MyFont='Envy_Code_R'
-let g:MyFontSize=11
+let g:MyFontSize=10
 call IncreaseFontSize(0)
 
 map - :call IncreaseFontSize(-1)<cr>
