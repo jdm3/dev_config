@@ -31,7 +31,7 @@ global variables (prefixed with `g:`), making them ideal for configuring the beh
 file basis using `ftplugin` or `autocmd`. For example, the `argwrap_tail_comma` variable has two variants declared as
 `b:argwrap_tail_comma` and `g:argwrap_tail_comma`, for buffer and global scopes respectively.
 
-*   **argwrap_line_prefix**
+*   **argwrap\_line\_prefix**
 
     Specifies a line prefix to be added and removed when working with languages that require newlines to be escaped.
 
@@ -55,7 +55,7 @@ file basis using `ftplugin` or `autocmd`. For example, the `argwrap_tail_comma` 
     \)
     ```
 
-*   **argwrap_padded_braces**
+*   **argwrap\_padded\_braces**
 
     Specifies which brace types should be padded on the inside with spaces.
 
@@ -75,9 +75,9 @@ file basis using `ftplugin` or `autocmd`. For example, the `argwrap_tail_comma` 
 
     *Padding can be specified for multiple brace types (`let g:argwrap_padded_braces = '[{'`)*
 
-*   **argwrap_tail_comma**
+*   **argwrap\_tail\_comma**
 
-    Specifies if the closing brace should be preceded with a comma when wrapping lines.
+    Specifies if any closing brace should be preceded with a comma when wrapping lines.
 
     *Tail comma disabled (default)*
 
@@ -99,7 +99,31 @@ file basis using `ftplugin` or `autocmd`. For example, the `argwrap_tail_comma` 
     )
     ```
 
-*   **argwrap_wrap_closing_brace**
+*   **argwrap\_tail\_comma\_braces**
+
+    Specifies which closing brace should be preceded with a comma when wrapping lines.
+
+    *Tail comma disabled (default)*
+
+    ```
+    Foo(
+        wibble,
+        wobble,
+        wubble
+    )
+    ```
+
+    *Tail comma enabled for square brackets only (`let g:argwrap_tail_comma_braces = '['`)*
+
+    ```
+    r = [
+        2,
+        3,
+        5,
+    ]
+    ```
+
+*   **argwrap\_wrap\_closing\_brace**
 
     Specifies if the closing brace should be wrapped to a new line.
 
@@ -130,4 +154,19 @@ file basis using `ftplugin` or `autocmd`. For example, the `argwrap_tail_comma` 
 
 ## License ##
 
-MIT
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
