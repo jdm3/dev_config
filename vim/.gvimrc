@@ -23,11 +23,9 @@ colorscheme solarized
 color solarized
 
 "autocmd BufEnter *.{h,c,cpp} highlight link StyleViolation SpellBad
-"autocmd BufEnter *.{h,c,cpp} match StyleViolation /\%81v.\+\|\s\+$\|\t/
-autocmd BufEnter *.{h,c,cpp} highlight link StyleViolation SpellBad
-autocmd BufEnter *.{h,c,cpp} match StyleViolation /\%81v.\+\|\t\|\s\+$/
-autocmd InsertEnter *.{h,c,cpp} match StyleViolation /\%81v.\+\|\t\|\s\+\%#\@<!$/
-autocmd InsertLeave *.{h,c,cpp} match StyleViolation /\%81v.\+\|\t\|\s\+$/
+"autocmd BufEnter *.{h,c,cpp} match StyleViolation /\%81v.\+\|\t\|\s\+$/
+"autocmd InsertEnter *.{h,c,cpp} match StyleViolation /\%81v.\+\|\t\|\s\+\%#\@<!$/
+"autocmd InsertLeave *.{h,c,cpp} match StyleViolation /\%81v.\+\|\t\|\s\+$/
 
 function! IncreaseFontSize(amount)
 	let g:MyFontSize=g:MyFontSize+a:amount
