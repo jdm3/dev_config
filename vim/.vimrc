@@ -80,6 +80,9 @@ set nowritebackup           " write files directly (instead of write to backup a
 " Disable automatic comment on new lines created by o or O
 autocmd FileType * set formatoptions-=ro
 
+" Treat .cshtml files as html syntax
+autocmd BufReadPost *.cshtml set syntax=html
+
 " Windows
 map <C-J> <C-W>j
 map <C-K> <C-W>k
