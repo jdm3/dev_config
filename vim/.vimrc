@@ -1,5 +1,7 @@
 " Start out not in VI compatible mode.  Should be first, as it changes other
 " options as a side effect.
+"
+" Required by pathogen
 set nocompatible
 
 " Remove existing autocmds to avoid duplicates

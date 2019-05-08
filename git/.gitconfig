@@ -11,23 +11,23 @@
     ft = remote -v update -p
     lg = log --full-history --pretty=\"format:%C(yellow)%h%Cgreen%d%Creset %s\" -n 15
     lgg = log --graph --branches --remotes --full-history --pretty=\"format:%C(yellow)%h%Cgreen%d%Creset %s (%an, %cd)\" -n 22
-    st = status --short --branch
+    st = status --short --branch --ignored
     fix = commit --amend --no-edit
 [color]
     branch = auto
     diff = auto
-    interactive = true
+    interactive = auto
     status = auto
     ui = auto
-#[color "diff"]
-#    commit = yellow yellow
-#    frag = cyan dim
-#    func = cyan
-#    meta = yellow
-#    new = green
-#    old = red
-#    plain = normal
-#    whitespace = black red
+[color "diff"]
+    commit = yellow bold
+    frag = cyan dim
+    func = cyan
+    meta = yellow
+    new = green
+    old = red
+    plain = normal
+    whitespace = black red
 [core]
     autocrlf = false
     editor = \"c:\\Program Files (x86)\\Vim\\vim80\\vim.exe\"
@@ -95,3 +95,8 @@
 [user]
     name = todo
     email = todo@todo.com
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
