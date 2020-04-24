@@ -1,20 +1,3 @@
-# dev_config
-
-Collection of configuration files and such used on dev machines
-
-## Useful links
-
-- https://git-scm.com/download/win
-- ftp://ftp.vim.org/pub/vim/pc/gvim80.exe
-- https://download.damieng.com/fonts/original/EnvyCodeR-PR7.zip
-- http://www.7-zip.org/a/7z1604-x64.exe
-- http://downloads.sourceforge.net/winmerge/WinMerge-2.14.0-Setup.exe
-- https://download.sysinternals.com/files/PSTools.zip
-- https://download.sysinternals.com/files/ProcessExplorer.zip
-- https://the.earth.li/~sgtatham/putty/latest/x86/putty.exe
-
-Make sure git mingw path is after vim, or else will use the unix vim in
-console.
 
 Increase Win10 keyboard repeat rate (reboot required):
 ```
@@ -25,3 +8,10 @@ Increase Win10 keyboard repeat rate (reboot required):
     "Flags"="59"
     "BounceTime"="0"
 ```
+
+Display windows build verison on desktop (reboot required):
+```
+    [HKEY_CURRENT_USER\Control Panel\Desktop]
+    "PaintDesktopVersion"="1"
+```
+
