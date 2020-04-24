@@ -19,8 +19,8 @@ let c_comment_strings=1
 syntax reset
 
 set background=dark
-colorscheme solarized
-color solarized
+"colorscheme solarized
+"color solarized
 
 "autocmd BufEnter *.{h,c,cpp} highlight link StyleViolation SpellBad
 "autocmd BufEnter *.{h,c,cpp} match StyleViolation /\%81v.\+\|\t\|\s\+$/

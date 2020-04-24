@@ -13,15 +13,12 @@ behave mswin
 " Use , for any commands that specify via <leader>
 let mapleader=","
 
-" setup pathogen
-call pathogen#infect()
-
-" setup argwrap
-let g:argwrap_line_prefix=""        " prefix for new lines
-let g:argwrap_padded_braces=""      " types of braces that require padding
-let g:argwrap_tail_comma=0          " does closing brace require comma
-let g:argwrap_wrap_closing_brace=0  " put closing brace on new line
-nnoremap <silent> <leader>f :ArgWrap<cr>
+"" setup argwrap
+"let g:argwrap_line_prefix=""        " prefix for new lines
+"let g:argwrap_padded_braces=""      " types of braces that require padding
+"let g:argwrap_tail_comma=0          " does closing brace require comma
+"let g:argwrap_wrap_closing_brace=0  " put closing brace on new line
+"nnoremap <silent> <leader>f :ArgWrap<cr>
 
 " Enable syntax highlighting keeping current color settings (use syntax on to
 " overrule settings with defaults)
