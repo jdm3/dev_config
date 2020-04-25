@@ -1,8 +1,0 @@
-tools/SPIRV-Headers
-.DS_Store
-*.spv*
-*.vert
-*.frag
-*.tess*
-*.comp
-*.glsl
