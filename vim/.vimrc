@@ -1,7 +1,5 @@
 " Start out not in VI compatible mode.  Should be first, as it changes other
 " options as a side effect.
-"
-" Required by pathogen
 set nocompatible
 
 " Remove existing autocmds to avoid duplicates
@@ -12,13 +10,6 @@ behave mswin
 
 " Use , for any commands that specify via <leader>
 let mapleader=","
-
-"" setup argwrap
-"let g:argwrap_line_prefix=""        " prefix for new lines
-"let g:argwrap_padded_braces=""      " types of braces that require padding
-"let g:argwrap_tail_comma=0          " does closing brace require comma
-"let g:argwrap_wrap_closing_brace=0  " put closing brace on new line
-"nnoremap <silent> <leader>f :ArgWrap<cr>
 
 " Enable syntax highlighting keeping current color settings (use syntax on to
 " overrule settings with defaults)
@@ -51,10 +42,20 @@ set lazyredraw      " Don't refresh screen during macros
 set nocursorline    " Don't highlight line cursor is on
 set noshowmatch     " Don't highlight matching parenthesis-like characters, does this anyway and setting this slows down formatting
 set number          " Show line numbers
-set ruler           " Show line and column number on status line
 set showcmd         " Show last command entered in bottom right
 set showmode        " Show current mode in bottom right
 set wildmenu        " Show graphical menu of options for auto-complete
+
+set laststatus=2    " Always show statusline
+set statusline=
+set statusline+=%#StatusLineNC#
+set statusline+=%<%f
+set statusline+=%#VertSplit#
+set statusline+=\ %h%m%r%=%{&fileencoding?&fileencoding:&encoding}\ \[%{&fileformat}\]
+set statusline+=%#StatusLine#
+set statusline+=\ %3.c\ %4.l
+set statusline+=%#StatusLineNC#
+set statusline+=/%4.L
 
 " Searching
 set incsearch                       " start searching as characters are entered
@@ -69,7 +70,7 @@ filetype plugin indent on   " turn on file type detection and custom indentation
 set autoread                " automatically read file changes made outside of vim
 set autowrite               " write changes on :next, etc.
 set encoding=utf-8          " vim text character encoding
-set fileformats=unix,dos    " eol characters to try when reading a file
+set fileformats=dos,unix    " eol characters to try when reading a file
 set nobackup                " make a backup before overwriting a file.
 set nowritebackup           " write files directly (instead of write to backup and overwrite)
 "set noswapfile
@@ -82,17 +83,19 @@ autocmd FileType * set formatoptions-=ro
 " Treat .cshtml files as html syntax
 autocmd BufReadPost *.cshtml set syntax=html
 
-" Windows
+" Window switching shortcuts: e.g.: ctrl-j instead of ctrl-w j
 map <C-J> <C-W>j
 map <C-K> <C-W>k
 map <C-H> <C-W>h
 map <C-L> <C-W>l
 map <C-_> <C-W>_
+map <C-=> <C-W>=
 
 " Diff/merge
+nmap <leader>n ]c
+nmap <leader>p [c
+
 if &diff
-    nmap <leader>n ]c
-    nmap <leader>p [c
     nmap <leader>q :update<cr>:qa<cr>
     nmap <leader>1 :diffget 1<cr>]c
     nmap <leader>2 :diffget 2<cr>]c
@@ -107,4 +110,36 @@ else
     \   exe "normal g`\"" |
     \ endif
 endif
+
+" Allow windows to have zero size
+set winminheight=0
+set winminwidth=0
+
+" Enlarge the the active window to full
+set winheight=999
+
+" ctrlp
+let g:ctrlp_working_path_mode='rac'
+let g:ctrlp_switch_buffer='E'
+let g:ctrlp_custom_ignore = {
+    \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+    \ 'file': '\v\.(exe|dll|so|swp|zip)$',
+    \ }
+
+" vim-argwrap
+let g:argwrap_wrap_closing_brace=0
+nnoremap <silent> <leader>a :ArgWrap<cr>
+
+" VimCompletesMe
+let g:vcm_s_tab_behavior=1
+
+" vim-gitgutter
+let g:gitgutter_log=1
+set signcolumn=yes
+set updatetime=500
+
+" vim-gutentags
+" :GutentagsUpdate to update file
+" :GutentagsUpdate! to update project
+let g:gutentags_ctags_tagfile='.tags'
 

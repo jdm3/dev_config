@@ -30,7 +30,7 @@
     whitespace = black red
 [core]
     autocrlf = false
-    editor = \"c:\\Program Files (x86)\\Vim\\vim80\\vim.exe\"
+    editor = \"c:\\Program Files (x86)\\Vim\\vim82\\vim.exe\"
     pager = 
     symlinks = false
     excludesfile = ~/.gitignore
@@ -46,10 +46,10 @@
     cmd = \"c:\\program files\\sourcegear\\common\\diffmerge\\sgdm.exe\" --nosplash \"$LOCAL\" \"$REMOTE\"
     prompt = false
 [difftool "gvimdiff"]
-    cmd = \"c:\\program files (x86)\\Vim\\vim80\\gvim.exe\" -f -d -c 'wincmd l' -c 'cd $GIT_PREFIX' \"$LOCAL\" \"$REMOTE\"
+    cmd = \"c:\\program files (x86)\\Vim\\vim82\\gvim.exe\" -f -d -c 'wincmd l' -c 'cd $GIT_PREFIX' \"$LOCAL\" \"$REMOTE\"
     prompt = false
 [difftool "winmergeu"]
-    cmd = \"c:\\program files (x86)\\winmerge\\winmergeu.exe\" \"$LOCAL\" \"$REMOTE\"
+    cmd = \"c:\\program files\\winmerge\\winmergeu.exe\" \"$LOCAL\" \"$REMOTE\"
     prompt = false
 [help]
     format = html
@@ -73,7 +73,7 @@
     cmd = \"c:\\program files\\sourcegear\\common\\diffmerge\\sgdm.exe\" --nosplash --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
     trustExitCode = true
 #[mergetool "gvimmerge"]
-#    cmd = \"c:\\program files (x86)\\Vim\\vim80\\gvim.exe\" -f -d -c 'wincmd l' -c 'cd $GIT_PREFIX' \"$LOCAL\" \"$REMOTE\"
+#    cmd = \"c:\\program files (x86)\\Vim\\vim82\\gvim.exe\" -f -d -c 'wincmd l' -c 'cd $GIT_PREFIX' \"$LOCAL\" \"$REMOTE\"
 #    keepBackup = false
 #    keepTemporaries = false
 #    prompt = false
@@ -86,7 +86,7 @@
     # REMOTE = version to be merged
     # BASE = common ancestor
     # MERGED = file where results will be written
-    cmd = \"c:\\program files (x86)\\winmerge\\winmergeu.exe\" \"$REMOTE\" \"$LOCAL\" \"$MERGED\"
+    cmd = \"c:\\program files\\winmerge\\winmergeu.exe\" \"$REMOTE\" \"$LOCAL\" \"$MERGED\"
     trustExitCode = false
 [pack]
     packSizeLimit = 2g

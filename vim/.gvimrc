@@ -8,6 +8,7 @@ set guioptions+=t
 set guioptions+=r
 set guioptions+=L
 set guioptions-=T
+set guioptions+=k
 set columns=120
 set lines=50
 
@@ -27,8 +28,8 @@ colorscheme solarized8_flat
 "autocmd InsertLeave *.{h,c,cpp} match StyleViolation /\%81v.\+\|\t\|\s\+$/
 
 function! IncreaseFontSize(amount)
-	let g:MyFontSize=g:MyFontSize+a:amount
-	execute 'set guifont=' . g:MyFont . ':h' . g:MyFontSize . ':cANSI'
+    let g:MyFontSize=g:MyFontSize+a:amount
+    execute 'set guifont=' . g:MyFont . ':h' . g:MyFontSize . ':cANSI'
 endfunction
 
 let g:MyFont='Envy_Code_R'
@@ -41,8 +42,4 @@ map + :call IncreaseFontSize(1)<cr>
 " Maximize all windows
 if &diff
     set lines=999 columns=999
-else
-    set winminheight=0
-    set winminwidth=0
-    set winheight=999
 endif
