@@ -1,11 +1,12 @@
 
-Increase Win10 keyboard repeat rate (reboot required):
+Custom filter keys settings on Win10.  Flags: KeyClick, Show status, Activation
+sound, Confirm activation, Use shortcut, Available, On:
 ```
     [HKEY_CURRENT_USER\Control Panel\Accessibility\Keyboard Response]
-    "AutoRepeatDelay"="200"
+    "AutoRepeatDelay"="180"
     "AutoRepeatRate"="6"
     "DelayBeforeAcceptance"="0"
-    "Flags"="59"
+    "Flags"="27"
     "BounceTime"="0"
 ```
 
