@@ -1,14 +1,14 @@
 set ch=1
 set mousehide
 
-set guioptions+=a
-set guioptions+=m
-set guioptions+=g
-set guioptions+=t
-set guioptions+=r
-set guioptions+=L
-set guioptions-=T
-set guioptions+=k
+" WARNING: don't use autoselect (a), scrolling in visual mode is slow
+set guioptions=
+set guioptions+=!   " external commands in terminal window
+set guioptions+=g   " show inactive menu items grey
+set guioptions+=m   " menu bar
+set guioptions+=r   " right hand scroll bar
+set guioptions+=L   " left-hand scroll bar when vertically split
+set guioptions+=k   " keep window size when adding/removing scroll bars
 set columns=120
 set lines=50
 
