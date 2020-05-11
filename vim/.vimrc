@@ -96,6 +96,7 @@ nmap <leader>n ]c
 nmap <leader>p [c
 
 if &diff
+    nmap <leader>u :update<cr>
     nmap <leader>q :update<cr>:qa<cr>
     nmap <leader>1 :diffget 1<cr>]c
     nmap <leader>2 :diffget 2<cr>]c
@@ -116,7 +117,9 @@ set winminheight=0
 set winminwidth=0
 
 " Enlarge the the active window to full
-set winheight=999
+if &diff == 0
+    set winheight=999
+endif
 
 " ctrlp
 let g:ctrlp_working_path_mode='rac'

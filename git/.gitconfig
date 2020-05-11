@@ -57,7 +57,8 @@
 [https]
 [merge]
     #tool = diffmerge
-    tool = gvimdiff
+    #tool = gvimdiff
+    tool = gvimmerge
     #tool = p4merge
     #tool = winmergeu
 [mergetool]
@@ -72,12 +73,12 @@
     # MERGED = file where results will be written
     cmd = \"c:\\program files\\sourcegear\\common\\diffmerge\\sgdm.exe\" --nosplash --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
     trustExitCode = true
-#[mergetool "gvimmerge"]
-#    cmd = \"c:\\program files (x86)\\Vim\\vim82\\gvim.exe\" -f -d -c 'wincmd l' -c 'cd $GIT_PREFIX' \"$LOCAL\" \"$REMOTE\"
-#    keepBackup = false
-#    keepTemporaries = false
-#    prompt = false
-#    trustExitCode = true
+[mergetool "gvimmerge"]
+    cmd = \"c:\\program files (x86)\\Vim\\vim82\\gvim.exe\" -f -d -c \"simalt ~x | 4wincmd w | wincmd J\" \"$LOCAL\" \"$BASE\" \"$REMOTE\" \"$MERGED\"
+    keepBackup = false
+    keepTemporaries = false
+    prompt = false
+    trustExitCode = true
 [mergetool "p4merge"]
     cmd = p4merge.exe \"$BASE\" \"$REMOTE\" \"$LOCAL\" \"$MERGED\"
     trustExitCode = false
