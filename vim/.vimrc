@@ -91,6 +91,10 @@ map <C-L> <C-W>l
 map <C-_> <C-W>_
 map <C-=> <C-W>=
 
+" Shortcuts for switching background light/dark
+nmap <leader>l :set background=light<cr>
+nmap <leader>d :set background=dark<cr>
+
 " Diff/merge
 nmap <leader>n ]c
 nmap <leader>p [c
