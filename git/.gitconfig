@@ -46,7 +46,7 @@
     cmd = \"c:\\program files\\sourcegear\\common\\diffmerge\\sgdm.exe\" --nosplash \"$LOCAL\" \"$REMOTE\"
     prompt = false
 [difftool "gvimdiff"]
-    cmd = \"c:\\program files (x86)\\Vim\\vim82\\gvim.exe\" -f -d -c 'wincmd l' -c 'cd $GIT_PREFIX' \"$LOCAL\" \"$REMOTE\"
+    cmd = \"c:\\program files (x86)\\Vim\\vim82\\gvim.exe\" -f -d -c \"simalt ~x\" -c \"cd $GIT_PREFIX\" \"$LOCAL\" \"$REMOTE\"
     prompt = false
 [difftool "winmergeu"]
     cmd = \"c:\\program files\\winmerge\\winmergeu.exe\" \"$LOCAL\" \"$REMOTE\"
