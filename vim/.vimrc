@@ -137,9 +137,6 @@ let g:ctrlp_custom_ignore = {
 let g:argwrap_wrap_closing_brace=0
 nnoremap <silent> <leader>a :ArgWrap<cr>
 
-" VimCompletesMe
-let g:vcm_s_tab_behavior=1
-
 " vim-gitgutter
 let g:gitgutter_log=1
 set signcolumn=yes
