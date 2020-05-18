@@ -11,10 +11,6 @@ behave mswin
 " Use , for any commands that specify via <leader>
 let mapleader=","
 
-" Enable syntax highlighting keeping current color settings (use syntax on to
-" overrule settings with defaults)
-syntax enable
-
 " These keywords start an extra indent in the next line
 set cinwords=
 
@@ -91,7 +87,9 @@ map <C-L> <C-W>l
 map <C-_> <C-W>_
 map <C-=> <C-W>=
 
-" Shortcuts for switching background light/dark
+" Enable syntax highlighting keeping current color settings (use syntax on to
+" overrule settings with defaults)
+syntax enable
 nmap <leader>l :set background=light<cr>
 nmap <leader>d :set background=dark<cr>
 
@@ -124,6 +122,11 @@ set winminwidth=0
 if &diff == 0
     set winheight=999
 endif
+
+" Set python dll locations.  These need to match 32/64 bit and versions vim
+" was compiled for (see compile command line in :version<cr>)
+set pythondll=~/AppData/Local/Programs/Python/Python27-32/python27.dll
+set pythonthreedll=~/AppData/Local/Programs/Python/Python36-32/python36.dll
 
 " ctrlp
 let g:ctrlp_working_path_mode='rac'
