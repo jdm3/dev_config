@@ -5,3 +5,6 @@
 # Open office docs
 ~$*.pptx
 ~$*.xlsx
+
+# Tags
+.tags
