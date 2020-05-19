@@ -137,11 +137,6 @@ let g:ctrlp_custom_ignore = {
 let g:argwrap_wrap_closing_brace=0
 nnoremap <silent> <leader>a :ArgWrap<cr>
 
-" vim-gitgutter
-let g:gitgutter_log=1
-set signcolumn=yes
-set updatetime=500
-
 " vim-gutentags
 " :GutentagsUpdate to update file
 " :GutentagsUpdate! to update project
