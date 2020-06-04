@@ -128,19 +128,38 @@ endif
 set pythondll=~/AppData/Local/Programs/Python/Python27-32/python27.dll
 set pythonthreedll=~/AppData/Local/Programs/Python/Python36-32/python36.dll
 
+" -----------------------------------------------------------------------------
 " ctrlp
+
 let g:ctrlp_working_path_mode='rac'
 let g:ctrlp_switch_buffer='E'
+
 let g:ctrlp_custom_ignore = {
     \ 'dir':  '\v[\/]\.(git|hg|svn)$',
     \ 'file': '\v\.(exe|dll|so|swp|zip)$',
     \ }
 
+" change default accept key mappings
+"     e = current buffer
+"     h = horizontal split
+"     t = new tab
+"     v = vertical split
+let g:ctrlp_prompt_mappings = {
+    \ 'AcceptSelection("e")': ['<c-cr>', '<2-LeftMouse>'],
+    \ 'AcceptSelection("h")': ['<cr>', '<c-s>', '<c-x>'],
+    \ 'AcceptSelection("t")': ['<c-t>'],
+    \ 'AcceptSelection("v")': ['<c-v>', '<RightMouse>'],
+    \ }
+
+" -----------------------------------------------------------------------------
 " vim-argwrap
+
 let g:argwrap_wrap_closing_brace=0
 nnoremap <silent> <leader>a :ArgWrap<cr>
 
+" -----------------------------------------------------------------------------
 " vim-gutentags
+
 " :GutentagsUpdate to update file
 " :GutentagsUpdate! to update project
 let g:gutentags_ctags_tagfile='.tags'
