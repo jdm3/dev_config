@@ -42,7 +42,10 @@ if &diff
     set lines=999 columns=999
 endif
 
+" -----------------------------------------------------------------------------
 " YouCompleteMe
+
+set completeopt-=preview       " don't open extra complete info in preview/scratch window
 
 let g:ycm_use_clangd=1
 let g:ycm_clangd_binary_path="C:/Program Files/LLVM/bin/clangd.exe"
