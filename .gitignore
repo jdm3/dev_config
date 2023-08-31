@@ -1,0 +1,15 @@
+# vim swap files
+.*.swp
+.*.swo
+
+# VS command line plugin config
+*.args.json
+
+# Open office docs
+~$*.pptx
+~$*.xlsx
+
+# Tags
+.tags
+.tags.lock
+.tags.temp

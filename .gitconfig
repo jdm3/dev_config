@@ -1,0 +1,104 @@
+[advice]
+    pushNonFastForward = true
+    statushints = true
+    commitbeforemerge = true
+    resolveconflict = true
+    implicitidentity = true
+    detachedhead = true
+[alias]
+    br = branch -v -a
+    co = checkout
+    ft = remote -v update -p
+    lg = log --full-history --pretty=\"format:%C(yellow)%h%Cgreen%d%Creset %s\" -n 15
+    lgg = log --graph --branches --remotes --full-history --pretty=\"format:%C(yellow)%h%Cgreen%d%Creset %s (%an, %cd)\" -n 22
+    st = status --short --branch --ignored
+    fix = commit --amend --no-edit
+[color]
+    branch = auto
+    diff = auto
+    interactive = auto
+    status = auto
+    ui = auto
+[color "diff"]
+    commit = yellow bold
+    frag = cyan dim
+    func = cyan
+    meta = yellow
+    new = green
+    old = red
+    plain = normal
+    whitespace = black red
+[core]
+    autocrlf = true
+    editor = \"c:\\Program Files (x86)\\Vim\\vim90\\vim.exe\"
+    pager = 
+    symlinks = false
+    excludesfile = ~/.gitignore
+[diff]
+    #tool = diffmerge
+    #tool = gvimdiff
+    tool = winmergeu
+    #tool = bc4
+[diff "astextplain"]
+    textconv = astextplain
+[difftool]
+    prompt = false
+[difftool "diffmerge"]
+    cmd = \"c:\\program files\\sourcegear\\common\\diffmerge\\sgdm.exe\" --nosplash \"$LOCAL\" \"$REMOTE\"
+[difftool "gvimdiff"]
+    cmd = \"c:\\program files (x86)\\Vim\\vim90\\gvim.exe\" -f -d -c \"simalt ~x\" -c \"cd $GIT_PREFIX\" \"$LOCAL\" \"$REMOTE\"
+[difftool "winmergeu"]
+    cmd = \"c:\\program files\\winmerge\\winmergeu.exe\" \"$LOCAL\" \"$REMOTE\"
+[difftool "bc4"]
+    cmd = \"c:\\program files\\Beyond Compare 4\\BComp.exe\" \"$LOCAL\" \"$REMOTE\"
+[help]
+    format = html
+[http]
+[https]
+[merge]
+    #tool = diffmerge
+    #tool = gvimdiff
+    #tool = gvimmerge
+    #tool = p4merge
+    #tool = winmergeu
+    tool = bc4
+[mergetool]
+    keepBackup = false          # Don't generate .orig files
+    keepTemporaries = false     # Delete temporaries after tool exits
+    writeToTemp = true          # Writes temporaries to a temporary directory
+    prompt = false              # Don't prompt before each merge resolution
+[mergetool "diffmerge"]
+    # LOCAL = current branch version
+    # REMOTE = version to be merged
+    # BASE = common ancestor
+    # MERGED = file where results will be written
+    cmd = \"c:\\program files\\sourcegear\\common\\diffmerge\\sgdm.exe\" --nosplash --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
+    trustExitCode = true
+[mergetool "gvimmerge"]
+    cmd = \"c:\\program files (x86)\\Vim\\vim90\\gvim.exe\" -f -d -c \"simalt ~x | 4wincmd w | wincmd J\" \"$LOCAL\" \"$BASE\" \"$REMOTE\" \"$MERGED\"
+    trustExitCode = true
+[mergetool "p4merge"]
+    cmd = p4merge.exe \"$BASE\" \"$REMOTE\" \"$LOCAL\" \"$MERGED\"
+    trustExitCode = false
+[mergetool "winmergeu"]
+    # LOCAL = current branch version
+    # REMOTE = version to be merged
+    # BASE = common ancestor
+    # MERGED = file where results will be written
+    cmd = \"c:\\program files\\winmerge\\winmergeu.exe\" \"$REMOTE\" \"$LOCAL\" \"$MERGED\"
+    trustExitCode = false
+[mergetool "bc4"]
+    cmd = \"c:\\program files\\Beyond Compare 4\\BComp.exe\" \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
+    trustExitCode = true
+[pack]
+    packSizeLimit = 2g
+[rebase]
+    autosquash = true
+[user]
+    name = todo
+    email = todo@todo.com
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
