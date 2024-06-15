@@ -30,7 +30,7 @@
     whitespace = black red
 [core]
     autocrlf = true
-    editor = \"c:\\Program Files (x86)\\Vim\\vim90\\vim.exe\"
+    editor = \"c:\\Program Files\\NeoVim\\bin\\nvim.exe\"
     pager = 
     symlinks = false
     excludesfile = ~/.gitignore
