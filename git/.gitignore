@@ -1,6 +1,13 @@
+# clang LSP
+.cache/
+compile_commands.json
+
 # vim swap files
 .*.swp
 .*.swo
+
+# VisualStudio
+*.vcxproj.user
 
 # VS command line plugin config
 *.args.json
@@ -13,3 +20,6 @@
 .tags
 .tags.lock
 .tags.temp
+
+# Claude
+.claude/settings.local.json
